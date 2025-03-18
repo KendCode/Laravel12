@@ -21,6 +21,7 @@ Route::get('/web',[CategoriaController::class, 'index']);
 Route::get('/web/create',[CategoriaController::class, 'create']);
 Route::get('/web/create/store',[CategoriaController::class, 'store']);
 
+
 /*Route::get('/', function () {
     //return view('welcome');
     return "pagina principal";
