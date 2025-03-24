@@ -23,7 +23,8 @@ Route::get('/web/create',[CategoriaController::class, 'create']);
 Route::get('/web/create/store',[CategoriaController::class, 'store']);
 
 
-Route::get('/create',[CreateEmpleadoController::class,'index']);
+Route::get('/post/index',[PostController::class,'index']);
+Route::get('/post/create',[PostController::class,'create']);
 
 /*Route::get('/', function () {
     //return view('welcome');

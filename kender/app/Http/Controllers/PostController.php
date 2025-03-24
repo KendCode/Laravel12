@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        return "Hola posts desde controlador";
+        return view('posts.index');
     }
     public function create(){
-        return "Hola posts desde controlador CREATE";
+        return view('posts.create');
     }
 }
