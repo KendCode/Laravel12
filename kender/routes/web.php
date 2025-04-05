@@ -30,13 +30,32 @@ Route::get('/post/create',[PostController::class,'create']);
 
 
 Route::get('prueba', function () {
+    //return "LOCOS";
     $post= new Post;
 
-    $post->title='titulo de la prueba';
-    $post->content='contenido de la prueba';
-    $post->categoria='categoria de la prueba';
-    $post->save();
-    return $post;
+    //AGREGAR
+    //$post->title='titulo de la prueba7';
+    //$post->contenido='contenido de la prueba7';
+    //$post->categoria='categoria de la prueba7';
+    //$post->save();
+    //return $post;
+
+
+    //actualizar
+    //$post=Post::find(3);
+    //$post->title='titulo de la prueba 3';
+    //$post->contenido='contenido de la prueba 2';
+    //$post->categoria='categoria de la prueba 2';
+    //$post->save();
+    //return $post;
+
+    //eliminar
+    //$post=Post::find(2);
+    //$post->delete();
+
+    //LISTAR
+    $posts=Post::all();
+    return $posts;
 });
 
 /*Route::get('/', function () {
