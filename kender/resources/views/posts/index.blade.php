@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>index JAJA</h1>
+    @foreach ($posts as $post)
+    <a href="/posts/{{$post->id}}"> 
+        <ul>
+            <li>AQUI VA EL CONTENIDO DE TITULO {{$post->title}}</li>
+        </ul>
+    </a>   
+    @endforeach
 </body>
 </html>

@@ -13,11 +13,11 @@ use App\Models\Post;
 
 //PRIMO LA RUTA
 Route::get('/', [HomeController::class,'index']);
-
+//TITULO DE LA BASE DE DATOS
 Route::get('/posts',[PostController::class, 'index']);
-
+//MOSTRAR CONTENIDO
 Route::get('/posts/create',[PostController::class, 'create']);
-
+//CREAR FORMULARIO DE REGISTRO BASE DE DATOS
 Route::get('/posts/{post}', [PostController::class, 'show']);
 
 //Route::get('/posts/{post}',function($post){
