@@ -2,22 +2,25 @@
 @section('content')
     <div class="container p-5 my-5 border">
         <p class="h1">Crear Empleado</p>
-        <form>
+        <form action="/posts" method="POST">
+            {{--csrf PERMITE QUE POR RAZONES DE SUGURIDAD ME PERMITE ENVIAR INFORMACION A LARAVEL  --}}
+          @csrf
             <div class="row">
               <div class="col">
-                <label for="cedula" class="fw-bold">Cedula:</label>
-                <input type="number" class="form-control" placeholder="" name="cedula">
+                <label for="titulo" class="fw-bold">Titulo:</label>
+                <input type="text" class="form-control" placeholder="" name="title">
               </div>
               <div class="col">
-                <label for="nombre" class="fw-bold">Nombre:</label>
-                <input type="text" class="form-control" placeholder="" name="nombre">
+                <label for="categoria" class="fw-bold">Categoria:</label>
+                <input type="text" class="form-control" placeholder="" name="categoria">
               </div>
               <div class="col">
-                <label for="apellido" class="fw-bold">Apellido:</label>
-                <input type="text" class="form-control" placeholder="" name="apellido">
+                <label for="apellido" class="fw-bold">Contenido:</label>
+                <textarea type="text" class="form-control" placeholder="" name="contenido"></textarea>
+                {{-- <input type="text" class="form-control" placeholder="" name="contenido"> --}}
               </div>
             </div>
-            <div class="row gy-3">
+            {{-- <div class="row gy-3">
               <div class="col">
                 <label for="fechaNac" class="fw-bold">Fecha de Nacimiento:</label>
                 <input type="date" class="form-control" placeholder="" name="fechaNac">
@@ -71,11 +74,11 @@
                     <option value="1">Masculino</option>
                     <option value="2">Femenino</option>
                   </select>
-              </div>
+              </div>--}}
               <div class="col">
                 <button type="submit" class="btn btn-success mt-4" name="crear">Crear</button>
               </div>
-            </div>
+            </div> 
           </form>
     </div>
 @endsection

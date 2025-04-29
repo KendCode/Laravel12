@@ -20,4 +20,14 @@ class PostController extends Controller
         $post=Post::find($post);
         return view('posts.show',['post'=>$post]);
     }
+    public function store(){
+        return "hola pagina modifico posts";
+        //return $request->all();
+        //$post= new Post;
+        //$post->title=$request->title;
+        //$post->contenido=$request->contenido;
+        //$post->categoria=$request->categoria;
+        //$post->save();
+        //return redirect('/posts');
+    }
 }

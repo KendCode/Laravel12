@@ -15,6 +15,8 @@ use App\Models\Post;
 Route::get('/', [HomeController::class,'index']);
 //TITULO DE LA BASE DE DATOS
 Route::get('/posts',[PostController::class, 'index']);
+//AQUI AGREGAMOS UNA RUTA PARA RECIBIR LOS DATOS DEL FORMULARIO CREATE
+Route::post('/posts',[PostController::class, 'store']);
 //MOSTRAR CONTENIDO
 Route::get('/posts/create',[PostController::class, 'create']);
 //CREAR FORMULARIO DE REGISTRO BASE DE DATOS
