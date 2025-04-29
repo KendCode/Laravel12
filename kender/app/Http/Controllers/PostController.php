@@ -17,6 +17,7 @@ class PostController extends Controller
     }
     public function show($post){
         //return "hola pagina modifico posts";
+        $post=Post::find($post);
         return view('posts.show',['post'=>$post]);
     }
 }

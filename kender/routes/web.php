@@ -30,7 +30,7 @@ Route::get('/web/create',[CategoriaController::class, 'create']);
 Route::get('/web/create/store',[CategoriaController::class, 'store']);
 
 
-Route::get('/post/index',[PostController::class,'index']);
+//Route::get('/post/index',[PostController::class,'index']);
 Route::get('/post/create',[PostController::class,'create']);
 
 
@@ -40,11 +40,11 @@ Route::get('prueba', function () {
     $post= new Post;
 
     //AGREGAR
-    //$post->title='titulo de la prueba7';
-    //$post->contenido='contenido de la prueba7';
-    //$post->categoria='categoria de la prueba7';
-    //$post->save();
-    //return $post;
+    $post->title='titulo de la prueba3';
+    $post->contenido='contenido de la prueba3';
+    $post->categoria='categoria de la prueba3';
+    $post->save();
+    return $post;
 
 
     //actualizar

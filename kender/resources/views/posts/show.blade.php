@@ -8,9 +8,14 @@
 </head>
 <body>
     {{-- primera forma --}}
-    {{-- <h1> "hola SHOW <?pho //echo $post; ?>" </h1> --}}
+    {{-- <h1> "hola SHOW <?php //echo $post; ?>" </h1> --}}
 
-    <h1>PAGINA DE SHOW {{$post}}</h1>
+    {{-- <h1>PAGINA DE SHOW {{$post}}</h1> --}}
+
+    <h1><center>{{$post->title}}</center></h1>
+    <h3><u>{{$post->contenido}}</u></h3>
+
+    <button><a href="/posts">VOLVER ATRAS</a></button>
 
 </body>
 </html>

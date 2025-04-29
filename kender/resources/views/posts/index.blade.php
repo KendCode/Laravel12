@@ -7,10 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <button><a href="/posts/create">CREATE</a></button>
     @foreach ($posts as $post)
     <a href="/posts/{{$post->id}}"> 
         <ul>
-            <li>AQUI VA EL CONTENIDO DE TITULO {{$post->title}}</li>
+            <li>{{$post->title}}</li>
         </ul>
     </a>   
     @endforeach
