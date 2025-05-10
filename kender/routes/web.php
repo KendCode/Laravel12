@@ -10,6 +10,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\CreateEmpleadoController;
 use App\Models\Post;
+use App\Models\Usuario;
+use App\Http\Controllers\UsuarioController;
 
 //PRIMO LA RUTA
 Route::get('/', [HomeController::class,'index']);
@@ -25,6 +27,13 @@ Route::get('/posts/{post}', [PostController::class, 'show']);
 //Route::get('/posts/{post}',function($post){
     //return "el id del post es:{$post}";
 //});
+
+//TAREA DE USUARIO
+Route::get('/usuario',[UsuarioController::class, 'index']);
+Route::get('/usuario/create',[UsuarioController::class, 'create']);
+Route::post('crearUsuario', [UsuarioController::class, 'store'])->name('usuario.store');
+Route::get('/usuario/{usuario}',[UsuarioController::class, 'show']);
+
 
 //WEB.PHP
 Route::get('/web',[CategoriaController::class, 'index']);
