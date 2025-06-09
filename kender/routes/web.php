@@ -12,6 +12,8 @@ use App\Http\Controllers\CreateEmpleadoController;
 use App\Models\Post;
 use App\Models\Usuario;
 use App\Http\Controllers\UsuarioController;
+use App\Mail\EnviarCredenciales;
+use Illuminate\Support\Facades\Mail;
 
 //PRIMO LA RUTA
 Route::get('/', [HomeController::class,'index']);
@@ -29,10 +31,24 @@ Route::get('/posts/{post}', [PostController::class, 'show']);
 //});
 
 //TAREA DE USUARIO
-Route::get('/usuario',[UsuarioController::class, 'index']);
+Route::get('/usuario',[UsuarioController::class, 'index'])->name('usuario.index');
 Route::get('/usuario/create',[UsuarioController::class, 'create']);
-Route::post('crearUsuario', [UsuarioController::class, 'store'])->name('usuario.store');
+Route::post('/crearUsuario', [UsuarioController::class, 'store'])->name('usuario.store');
 Route::get('/usuario/{usuario}',[UsuarioController::class, 'show']);
+Route::get('/usuario/{usuario}/edit',[UsuarioController::class, 'edit'])->name('usuario.edit');
+Route::put('/usuario/{usuario}', [UsuarioController::class, 'update'])->name('usuario.update');
+Route::delete('/usuario/{usuario}/delete', [UsuarioController::class, 'destroy'])->name('usuario.destroy');
+/*Route::get('/correo', function () {
+    $usuario = (object)[
+        'nombre' => 'Ariana',
+        'email' => 'kendermusicoficial@gmail.com'
+    ];
+    $password = 'clave12345';
+
+    Mail::to($usuario->email)->send(new EnviarCredenciales($usuario, $password));
+
+    return 'Correo de prueba enviado correctamente.';
+});*/
 
 
 //WEB.PHP
