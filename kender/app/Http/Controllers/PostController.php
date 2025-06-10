@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Post;
+use Barryvdh\DomPDF;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 use Illuminate\Http\Request;
 
@@ -29,5 +31,11 @@ class PostController extends Controller
         //$post->categoria=$request->categoria;
         //$post->save();
         //return redirect('/posts');
+    }
+    //  PARA PDF
+     public function exportPdf($post){
+        $post=Post::find($post);
+        $pdf =PDF::loadView('posts.show',compact('post'));
+        return $pdf->download('post_'.$post->id.'.pdf');
     }
 }

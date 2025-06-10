@@ -61,6 +61,8 @@
             </div>
         </div>
     </div>
+    
+    <button onclick="windows.open('((route{'post.export.Pdf', $post->id}))')"> </button>
 
     <!-- Bootstrap JS Bundle (Optional, for interactive components) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

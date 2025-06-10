@@ -61,6 +61,9 @@ Route::get('/web/create/store',[CategoriaController::class, 'store']);
 Route::get('/post/create',[PostController::class,'create']);
 
 
+Route::get('/post/{post}/pdf',[PostController::class,'exportPdf'])
+    ->name('post.export.Pdf');
+
 
 Route::get('prueba', function () {
     //return "LOCOS";

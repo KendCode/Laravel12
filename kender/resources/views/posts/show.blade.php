@@ -16,6 +16,7 @@
     <h3><u>{{$post->contenido}}</u></h3>
 
     <button><a href="/posts">VOLVER ATRAS</a></button>
+    <button onclick="window.open('{{route('post.export.Pdf',$post->id)}}')">DESCARGAR PDF</button>
 
 </body>
 </html>
